@@ -1,0 +1,238 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-ThinItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-ExtraLightItalic.ttf") format("truetype");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-MediumItalic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-ExtraBoldItalic.ttf") format("truetype");
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-BlackItalic.ttf") format("truetype");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@theme {
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+    --color-background: oklab(0.14233 0.00198 -0.01533);
+    --color-background-soft: oklab(0.16800 0.00345 -0.02068);
+    --color-surface: oklab(0.19253 0.00467 -0.02586);
+    --color-surface-elevated: oklab(0.22489 0.00584 -0.03052);
+    --color-surface-hover: oklab(0.26556 0.00765 -0.03830);
+    --color-surface-active: oklab(0.29961 0.00871 -0.04241);
+    --color-backdrop: oklab(0.10173 0.00385 -0.01684);
+
+    --color-foreground: oklab(0.97186 0.00223 -0.00764);
+    --color-foreground-secondary: oklab(0.83035 0.00465 -0.02031);
+    --color-foreground-muted: oklab(0.64913 0.00605 -0.03530);
+    --color-foreground-disabled: oklab(0.48450 0.00630 -0.03309);
+
+    --color-border: oklab(0.29131 0.00528 -0.03250);
+    --color-border-strong: oklab(0.37571 0.00658 -0.04245);
+
+    --color-primary: oklab(0.54134 0.09638 -0.22697);
+    --color-primary-hover: oklab(0.49067 0.09263 -0.22274);
+    --color-primary-active: oklab(0.43199 0.08147 -0.19419);
+    --color-primary-soft: oklab(0.24447 0.03468 -0.06689);
+    --color-primary-foreground: oklab(1.00000 0.00000 0.00000);
+    --color-primary-light: oklab(0.70897 0.06357 -0.14592);
+
+    --color-secondary: oklab(0.79712 -0.11412 -0.07002);
+    --color-secondary-hover: oklab(0.71484 -0.10272 -0.07252);
+    --color-secondary-soft: oklab(0.29021 -0.03027 -0.02348);
+    --color-secondary-foreground: oklab(0.24462 -0.03172 -0.01842);
+
+    --color-accent: oklab(0.72527 0.17244 -0.03115);
+    --color-accent-soft: oklab(0.27393 0.05811 -0.01951);
+    --color-accent-foreground: oklab(0.21426 0.05670 -0.01661);
+
+    --color-success: oklab(0.80035 -0.16032 0.08628);
+    --color-success-soft: oklab(0.29043 -0.04721 0.01995);
+    --color-warning: oklab(0.83686 0.01596 0.16364);
+    --color-warning-soft: oklab(0.29382 0.00153 0.04185);
+    --color-danger: oklab(0.71919 0.16436 0.03924);
+    --color-danger-hover: oklab(0.64503 0.20660 0.06096);
+    --color-danger-soft: oklab(0.26080 0.05697 0.00196);
+    --color-info: oklab(0.75351 -0.08430 -0.11051);
+    --color-info-soft: oklab(0.27574 -0.02426 -0.03545);
+
+    --color-rating: oklab(0.83686 0.01596 0.16364);
+    --color-rating-muted: oklab(0.50941 0.00636 0.06303);
+
+    --color-skeleton: oklab(0.23282 0.00549 -0.02837);
+
+    --color-focus: oklab(0.70897 0.06357 -0.14592);
+}
+
+@utility container {
+    padding-inline: 2.5rem;
+    margin-inline: auto;
+
+    @variant sm {
+        padding-inline: 3rem;
+    }
+
+    @variant lg {
+        padding-inline: 3rem;
+    }
+
+    @variant xl {
+        padding-inline: 3rem;
+    }
+
+    @variant 2xl {
+        padding-inline: 7rem;
+    }
+}
+
+.center {
+    @apply flex justify-center items-center;
+}
+
+button,
+a,
+NuxtLink {
+    cursor: pointer !important;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}

@@ -263,6 +263,12 @@ onBeforeUnmount(() => {
 watch(activeIndex, index => {
     preloadHero((index + 1) % heroItems.length)
 })
+
+const title = 'Yumeko - A world of Japanese animation'
+
+useSeoMeta({
+    title
+})
 </script>
 
 <template>
@@ -346,7 +352,8 @@ watch(activeIndex, index => {
                     </Transition>
                 </div>
 
-                <div class="z-10 mx-auto w-full max-w-90 shrink-0 sm:max-w-105 xl:mx-0 xl:w-90 hidden lg:block scale-70 -mr-10 xl:scale-100 xl:mr-0">
+                <div
+                    class="z-10 mx-auto w-full max-w-90 shrink-0 sm:max-w-105 xl:mx-0 xl:w-90 hidden lg:block scale-70 -mr-10 xl:scale-100 xl:mr-0">
                     <div class="mx-auto flex h-80 w-full items-center justify-center sm:h-97.5 xl:h-125">
                         <DepthCarousel :items="items" :card-width="carouselCardWidth" :card-height="carouselCardHeight"
                             :spread="carouselSpread" :depth="carouselDepth" :visible-cards="3" :tilt="18"
